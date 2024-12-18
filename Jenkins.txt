@@ -23,6 +23,10 @@ pipeline {
                 '''
             }
         }
-
+         stage('Message') {
+            steps {
+                 echo 'Hello Everyone'
+            }
+        }
     } 
 }
