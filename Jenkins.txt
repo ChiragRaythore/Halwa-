@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Git-Install') {
-            steps {
-                 sh '''
-                 sudo yum install git -y
-                 '''
-            }
-        }
         stage('git clone') {
             steps {
                  git 'https://github.com/Pritam-Khergade/student-ui.git'
