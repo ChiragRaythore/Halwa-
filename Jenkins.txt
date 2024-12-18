@@ -23,14 +23,6 @@ pipeline {
                 '''
             }
         }
-         stage('s3 bucket') {
-            steps {
-                echo 'Uploading Docker image to S3...'
-                sh '''
-                aws s3 cp /var/lib/jenkins/workspace/pipe/dockerfile s3://pipelinegit/s3bucketjen/dockerfile --region ap-south-1
-                '''
-            }
-        }
 
     } 
 }
